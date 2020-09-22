@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.mallikarjun.weather.viewmodel.WeatherViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        tools:context=".ui.main.TomorrowFragment">
+
+    <LinearLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{vm.mTomorrowDate}"
+            android:textSize="@dimen/text_header"/>
+
+        <TextView
+            android:id="@+id/tvSunRise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{vm.mTomorrowSunRiseAndSet}"
+            android:textSize="@dimen/text"/>
+
+        <TextView
+            android:id="@+id/tvTemp_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{vm.mTomorrowTempMin}"
+            android:textSize="@dimen/text"/>
+
+        <TextView
+            android:id="@+id/tvTemp_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{vm.mTomorrowTempMax}"
+            android:textSize="@dimen/text"/>
+
+        <TextView
+            android:id="@+id/textViewPressure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{vm.mTomorrowPressure}"
+            android:textSize="@dimen/text"/>
+
+        <TextView
+            android:id="@+id/textViewHumidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{vm.mTomorrowHumidity}"
+            android:textSize="@dimen/text"/>
+
+    </LinearLayout>
+    </ScrollView>
+</layout>
